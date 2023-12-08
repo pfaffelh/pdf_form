@@ -31,9 +31,9 @@ we write a file `data_from_bewerbungen.xls`, which contains all data from the pd
 
 In order to use this data for yet another pdf_form (`p6w_leer.pdf` here), we first fill in this form for creating a template. This is `p6w_vorlage.pdf`. Once we have this template, use
 ```
-python3 fill_excel.py -o data_for_einstellungen.xls -p p6w_vorlage.pdf
+python3 fill_excel.py -o data.xls -p p6w_vorlage.pdf
 ```
-in order to obtain an excel-file with the corresponding field names. This Excel file can now be updated using data from `data_from_bewerbungen.xls`. (It is allowed to delete columns from this file.) Once this is done, use 
+in order to obtain an excel-file with the corresponding field names. This Excel file can now be updated using data from `data_from_bewerbungen.xls`. (It is allowed to delete columns from `data.xls` in order to get this file.) Once this is done, use 
 ```
 python3 fill_pdf.py p6w_leer.pdf -f data_for_einstellungen.xls -s Name
 ```
