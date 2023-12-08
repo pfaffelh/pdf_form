@@ -42,6 +42,10 @@ def write_pdfs(pdf_form, excel_file, pdf_path, name_by = None):
     reader = PdfReader(pdf_form)
     fields = reader.get_fields()    
 
+    # Reduce fields to the column names of the xls-file
+    keys = list(set(list(df.columns)).intersection(set(fields.keys())))
+    fields = {key:value for key,value in fields.items() if key in keys}
+
     # Check Output-Pfad
     if not Path(pdf_path).is_dir():
         print(pdf_path + " is not a directory. Exiting...")
@@ -60,14 +64,17 @@ def write_pdfs(pdf_form, excel_file, pdf_path, name_by = None):
             for key, field in fields.items():
                 if is_check_box(fields[key]):
                     states = field["/_States_"]
-                    if not str(row[key]).lower() in {"", "nein", "off", "false", "0"}:
+                    if not str(row[key]).lower() in {"", "/off", "nein", "off", "false", "0"}:
                         state = [s for s in states if s != "/Off"][0]
-                        writer.update_page_form_field_values(writer.pages[i], {key: state}, auto_regenerate=False)
+                        try:
+                            writer.update_page_form_field_values(writer.pages[i], {key: state}, auto_regenerate=False)
+                        except:
+                            print("Problems with field " + key)
                 else:
                     try:
                         writer.update_page_form_field_values(writer.pages[i], {key: row[key]})
                     except:
-                        print("Probleme mit Feld " + key)
+                        print("Problems with text field " + key + ", value " + row[key])
 
         if name_by == None:
             filename = (args.output + "/" + str(index + 1) + ".pdf")
