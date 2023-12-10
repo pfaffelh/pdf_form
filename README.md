@@ -23,19 +23,19 @@ The second takes an excel file and fills an empty pdf form.
 We retrieve data from a pdf-form (example: `formular_bewerbungen_leer.pdf`). All data is stored in directory "input".
 Using 
 ```
-python3 fill_excel.py -o data_from_bewerbungen.xls -p input/*
+python3 fill_excel.py -o data_from_bewerbungen.xlsx -p input/*
 ```
-we write a file `data_from_bewerbungen.xls`, which contains all data from the pdfs.
+we write a file `data_from_bewerbungen.xlsx`, which contains all data from the pdfs.
 
 #### 2) Fill new pdf form with data
 
 In order to use this data for yet another pdf_form (`p6w_leer.pdf` here), we first fill in this form for creating a template. This is `p6w_vorlage.pdf`. Once we have this template, use
 ```
-python3 fill_excel.py -o data.xls -p p6w_vorlage.pdf
+python3 fill_excel.py -o data.xlsx -p p6w_vorlage.pdf
 ```
-in order to obtain an excel-file with the corresponding field names. This Excel file can now be updated using data from `data_from_bewerbungen.xls`. (It is allowed to delete columns from `data.xls` in order to get this file.) Once this is done, use 
+in order to obtain an excel-file with the corresponding field names. This Excel file can now be updated using data from `data_from_bewerbungen.xlsx`. (It is allowed to delete columns from `data.xlsx` in order to get this file.) Once this is done, use 
 ```
-python3 fill_pdf.py p6w_leer.pdf -f data_for_einstellungen.xls -s Name
+python3 fill_pdf.py p6w_leer.pdf -f data_for_einstellungen.xlsx -s Name
 ```
-in order to fill the empty form, one file for each row in `data_for_einstellungen.xls`. Here, `-s Name` leads to filenames which are indicated by the column Name in `data_for_einstellungen.xls`.
+in order to fill the empty form, one file for each row in `data_for_einstellungen.xlsx`. Here, `-s Name` leads to filenames which are indicated by the column Name in `data_for_einstellungen.xlsx`.
 
