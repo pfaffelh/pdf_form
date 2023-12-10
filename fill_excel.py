@@ -1,4 +1,4 @@
-import argparse, os, sys
+import argparse, os, sys, glob
 from pathlib import Path
 from pypdf import PdfReader
 import pandas as pd
@@ -45,9 +45,15 @@ if __name__ == "__main__":
                      help='The list of pdf-files which store the information which is to be saved in the Excel file')
     args = parser.parse_args()
 
+    # Manually expand wildcards on Windows
+    if args.pdf_files and '*' in str(args.pdf_files):
+        expanded_pdfs = glob.glob(sys.argv[4])
+        args = argparse.Namespace(excel_filename=args.excel_filename, pdf_files=expanded_pdfs)
+
     if Path(args.excel_filename).exists():
         print(args.excel_filename + " already exists. Exiting...")
         sys.exit()
+
     for file in args.pdf_files:
         if not Path(file).exists():
             print(file + " does not exist. Exiting...")
