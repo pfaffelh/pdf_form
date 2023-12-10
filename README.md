@@ -18,24 +18,23 @@ The second takes an excel file and fills an empty pdf form.
 
 ### Workflow:
 
-#### 1) Use filled pdf forms for an excel file
+#### 1) Create excel file from filled pdf form(s)
 
-We retrieve data from a pdf-form (example: `formular_bewerbungen_leer.pdf`). All data is stored in directory "input".
-Using 
+Use
 ```
-python3 fill_excel.py -o data_from_bewerbungen.xls -p input/*
+python3 fill_excel.py -o data_from_bewerbungen.xlsx -p path/*.pdf
 ```
-we write a file `data_from_bewerbungen.xls`, which contains all data from the pdfs.
+to create a file `data_from_bewerbungen.xlsx` that contains data from all pdfs at the specified path `path/*.pdf`.
+Alternatively list the pdf files you want to read:
+```
+python3 fill_excel.py -o data_from_bewerbungen.xlsx -p file1.pdf file2.pdf file3.pdf
+```
 
-#### 2) Fill new pdf form with data
+#### 2) Create pdf file(s) from filled excel file
 
-In order to use this data for yet another pdf_form (`p6w_leer.pdf` here), we first fill in this form for creating a template. This is `p6w_vorlage.pdf`. Once we have this template, use
+Use
 ```
-python3 fill_excel.py -o data.xls -p p6w_vorlage.pdf
-```
-in order to obtain an excel-file with the corresponding field names. This Excel file can now be updated using data from `data_from_bewerbungen.xls`. (It is allowed to delete columns from `data.xls` in order to get this file.) Once this is done, use `mkdir output` in order to create a folder for the filled pdfs. Then,
-```
+python3 fill_pdf.py p6w_leer.pdf -f data_for_einstellungen.xlsx -o Ordner -s Name
 python3 fill_pdf.py p6w_leer.pdf -o output -f data_for_einstellungen.xls -s Name
 ```
-in order to fill the empty form, one file for each row in `data_for_einstellungen.xls`. Here, `-s Name` leads to filenames which are indicated by the column Name in `data_for_einstellungen.xls`.
-
+to fill out the empty form `p6w_leer.pdf` with data from the excel file `data_for_einstellungen.xlsx`. The Option `-o` indicates the folder name `Ordner` where the pdf files will be created. The pdf files will be named after the field name given by the Option `-s`.
