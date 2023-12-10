@@ -22,12 +22,12 @@ The second takes an excel file and fills an empty pdf form.
 
 Use
 ```
-python3 fill_excel.py -o data_from_bewerbungen.xlsx -p path/*.pdf
+python3 fill_excel.py -o data_from_bewerbungen.xls -p path/*.pdf
 ```
 to create a file `data_from_bewerbungen.xlsx` that contains data from all pdfs at the specified path `path/*.pdf`.
 Alternatively list the pdf files you want to read:
 ```
-python3 fill_excel.py -o data.xls -p file1.pdf file2.pdf file3.pdf
+python3 fill_excel.py -o data_from_bewerbungen.xls -p file1.pdf file2.pdf file3.pdf
 ```
 
 #### 2) Create pdf file(s) from filled excel file
@@ -36,4 +36,4 @@ Use
 ```
 python3 fill_pdf.py p6w_leer.pdf -f data_for_einstellungen.xlsx -o output -s Name
 ```
-to fill out the empty form `p6w_leer.pdf` with data from the excel file `data_for_einstellungen.xlsx`. The required option `-o` indicates the folder name `Ordner` where the pdf files will be created. The pdf files will be named after the field name given by the Option `-s`.
+to fill out the empty form `p6w_leer.pdf` with data from the excel file `data_for_einstellungen.xlsx`. The required option `-o` indicates the folder where the pdf files will be created. The pdf files will be named after the field name given by the Option `-s`.
