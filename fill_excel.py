@@ -1,4 +1,4 @@
-import argparse, os, sys
+import argparse, os, sys, glob
 from pathlib import Path
 from pypdf import PdfReader
 import pandas as pd
@@ -46,6 +46,11 @@ if __name__ == "__main__":
     parser.add_argument('-f', '--force', nargs='?', const='c',
                      default='d', help='Force overwriting existing files.')
     args = parser.parse_args()
+
+    # Manually expand wildcards on Windows
+    if args.pdf_files and '*' in str(args.pdf_files):
+        expanded_pdfs = glob.glob(sys.argv[4])
+        args = argparse.Namespace(excel_filename=args.excel_filename, pdf_files=expanded_pdfs)
 
     if Path(args.excel_filename).exists() and args.force=='d':
         print(args.excel_filename + " already exists. Exiting...")
