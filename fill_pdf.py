@@ -14,7 +14,7 @@ def write_pdf_form_with_field_names(filename_pdf_empty, filename_pdf_filled):
         for key in text_fields:
             writer.update_page_form_field_values(
                 writer.pages[i], {key: key}
-            )
+            )    
     with open(filename_pdf_filled, "wb") as output_stream:
         writer.write(output_stream)
     print("File " + filename_pdf_filled + " written." )
@@ -50,6 +50,7 @@ def write_pdfs(pdf_form, excel_file, pdf_path, name_by = None):
     if not Path(pdf_path).is_dir():
         print(pdf_path + " is not a directory. Exiting...")
         sys.exit()
+
     print("Write pdfs in " + pdf_path)
 
     # Write one file for each row in the excel file.
@@ -80,10 +81,12 @@ def write_pdfs(pdf_form, excel_file, pdf_path, name_by = None):
             filename = (args.output + "/" + str(index + 1) + ".pdf")
         else:
             filename = (args.output + "/" + row[name_by] + ".pdf")
-        print(filename)
         with open(filename, "wb") as output_stream:
-            writer.write(output_stream)
-
+            if Path(filename).exists() and args.force=='d':
+                print(filename + " already exists. Continuing...")
+            else:
+                writer.write(output_stream)
+                print(filename + " written.")
 
 if __name__ == "__main__":
 
@@ -96,22 +99,21 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Fill in pdf forms from an xls-file.')
     parser.add_argument('pdf_form',
                      help='The empty pdf form.')
-    parser.add_argument('-f', '--excel_filename', default = None,
-                     help='The Excel file for the data used to fill out the forms. Column names must match keys for the fields.  If no xls-file is given, only field names are filled into the form.')
-    parser.add_argument('-o', '--output', default = "output",
+    parser.add_argument('-i', '--excel_filename', required = True,
+                     help='The input Excel file for the data used to fill out the forms. Column names must match keys for the fields.  If no xls-file is given, only field names are filled into the form.')
+    parser.add_argument('-o', '--output', required = True,
                      help='The output folder for the filled pdfs.')
     parser.add_argument('-s', '--name_by', default = None,
                      help='Filled pdf files will be named after field name_by.')
+    parser.add_argument('-f', '--force', nargs='?', const='c',
+                     default='d', help='Force overwriting existing files.')
     args = parser.parse_args()
 
     # check output path
     path_to_output = Path(args.output)
-    if args.output == "output":
-        print("Will create folder output/ in current folder.")
-        if path_to_output.exists():
-            print("output/ already exists. Exiting...")
+    if not path_to_output.exists():
+            print(args.output + " does not exist. Exiting...")
             sys.exit()
-        os.mkdir(args.output)
 
     if args.excel_filename == None:
         write_pdf_form_with_field_names(args.pdf_form, args.output + "/" + "filled_form.pdf")

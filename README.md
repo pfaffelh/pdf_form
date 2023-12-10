@@ -33,9 +33,9 @@ In order to use this data for yet another pdf_form (`p6w_leer.pdf` here), we fir
 ```
 python3 fill_excel.py -o data.xls -p p6w_vorlage.pdf
 ```
-in order to obtain an excel-file with the corresponding field names. This Excel file can now be updated using data from `data_from_bewerbungen.xls`. (It is allowed to delete columns from `data.xls` in order to get this file.) Once this is done, use 
+in order to obtain an excel-file with the corresponding field names. This Excel file can now be updated using data from `data_from_bewerbungen.xls`. (It is allowed to delete columns from `data.xls` in order to get this file.) Once this is done, use `mkdir output` in order to create a folder for the filled pdfs. Then,
 ```
-python3 fill_pdf.py p6w_leer.pdf -f data_for_einstellungen.xls -s Name
+python3 fill_pdf.py p6w_leer.pdf -o output -f data_for_einstellungen.xls -s Name
 ```
 in order to fill the empty form, one file for each row in `data_for_einstellungen.xls`. Here, `-s Name` leads to filenames which are indicated by the column Name in `data_for_einstellungen.xls`.
 

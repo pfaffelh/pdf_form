@@ -43,9 +43,11 @@ if __name__ == "__main__":
                      help='The xls-file which is to be filled.')
     parser.add_argument('-p', '--pdf_files', required = True, nargs='+',
                      help='The list of pdf-files which store the information which is to be saved in the Excel file')
+    parser.add_argument('-f', '--force', nargs='?', const='c',
+                     default='d', help='Force overwriting existing files.')
     args = parser.parse_args()
 
-    if Path(args.excel_filename).exists():
+    if Path(args.excel_filename).exists() and args.force=='d':
         print(args.excel_filename + " already exists. Exiting...")
         sys.exit()
     for file in args.pdf_files:
