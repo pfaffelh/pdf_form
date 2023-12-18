@@ -10,6 +10,7 @@ def clear_tmp_output():
             if os.path.isfile(os.path.join(folder, filename)):
                 os.remove(os.path.join(folder, filename))
 
+clear_tmp_output()
 
 st.write("### Connecting your pdf-forms to Excel")
 
