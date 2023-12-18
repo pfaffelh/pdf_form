@@ -2,6 +2,7 @@ import argparse, os, sys, glob
 from pathlib import Path
 from pypdf import PdfReader
 import pandas as pd
+import logging
 
 # Read pdf-forms from filelist and put field contents in an excel file
 def df_from_pdfs(pdf_files):
@@ -10,8 +11,9 @@ def df_from_pdfs(pdf_files):
     keys = ['input_filename']
     for file in pdf_files:
         if not Path(file).exists():
-            print(file + " does not exist. Exiting...")
-            sys.exit()
+            text = file + " does not exist. Exiting..."
+            logging.error(text)
+            raise FileNotFoundError(text)
         reader = PdfReader(file)
         loc = reader.get_fields()
         keys = list(set(keys + list(loc)))
@@ -27,7 +29,7 @@ def df_from_pdfs(pdf_files):
             try:
                 loc_dict.update({key : loc_data[key]['/V']})
             except:
-                print("Problems with field " + key + " in field " + file + ".")        
+                logging.warning("Problems with field " + key + " in file " + file + ".")        
 
         data.append(loc_dict)
     df = pd.DataFrame.from_records(data)
@@ -37,6 +39,8 @@ if __name__ == "__main__":
 
     # excel_filename: the name of the path to excel file where the data should be stored
     # pdf_files: list of pdfs which contain the data
+
+    logging.basicConfig(level=logging.DEBUG, format = "%(asctime)s - %(levelname)s - %(message)s")
 
     parser = argparse.ArgumentParser(description='Write input from filles pdf-forms into an excel file.')
     parser.add_argument('-o', '--excel_filename', required = True,
@@ -53,15 +57,17 @@ if __name__ == "__main__":
         args = argparse.Namespace(excel_filename=args.excel_filename, pdf_files=expanded_pdfs)
 
     if Path(args.excel_filename).exists() and args.force=='d':
-        print(args.excel_filename + " already exists. Exiting...")
-        sys.exit()
+        text = args.excel_filename + " already exists. Exiting..."
+        logging.error(text)
+        raise FileExistsError(text)
     for file in args.pdf_files:
         if not Path(file).exists():
-            print(file + " does not exist. Exiting...")
-            sys.exit()
+            text = file + " does not exist. Exiting..."
+            logging.error(text)
+            raise FileNotFoundError(text)
 
     # Write excel file
     df = df_from_pdfs(args.pdf_files)
     df.to_excel(args.excel_filename, index=False, engine="xlsxwriter")
-    print("Written " + args.excel_filename + ".")
+    logging.info("Written " + args.excel_filename + ".")
     
