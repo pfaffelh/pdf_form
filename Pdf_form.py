@@ -78,7 +78,7 @@ def write_pdf(d, formfile, pdf_path):
                     st.write("Problems with text field " + key + ", value " + d[key])
 
     try:
-        output_filename = f"{str.split(d["filename"], ".")[0]}_P166.pdf"
+        output_filename = f"{str.split(d['filename'], '.')[0]}_P166.pdf"
     except:
         output_filename = ".pdf"
     filename = (pdf_path + "/" + output_filename)
