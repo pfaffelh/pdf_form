@@ -33,13 +33,13 @@ def data_from_pdfs(files):
         # Write filenames in first column
         loc_dict = {'filename' : file.name}  
         reader = PdfReader(file)
-        loc_data = reader.get_fields()
-        for key in loc_data:
-            try:
+        try:
+            loc_data = reader.get_fields()
+            for key in loc_data:
                 loc_dict.update({key : loc_data[key]['/V']})
-            except:
-                st.write(f"Problems with field {key} in file {file}.")
-        data.append(loc_dict)
+            data.append(loc_dict)
+        except:
+            st.write(f"Probleme mit Datei {file.name}.")
     return data
 
 # Check if a field in a pdf form is a Checkbox
