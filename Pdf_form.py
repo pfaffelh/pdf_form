@@ -1,3 +1,7 @@
+# Neu- Wiedereinstellung übernehmen
+# mit ohne Abschluss von bis mit
+# weitere/frühere Tätigkeiten von--bis bei
+
 import streamlit as st
 import pandas as pd
 from pypdf import PdfReader, PdfWriter
@@ -12,6 +16,16 @@ felder = {"filename": "filename",
           "plz": "PLZ",
           "email": "Email",
           "gebdat": "Geburtsdatum", 
+          "bereits-taetig-nein": "k13",
+          "bereits-taetig-ja": "k14",
+          "Einstellung-1": "k1", # "Neueinstellung",
+          "Einstellung-2": "k2", # "Wiedereinstellung",
+          "UniAbschl-1": "k4", # "ohne Abschluss",
+          "UniAbschl-2": "k5", # "mit Abschluss",
+          "Uni-bei": "frühere Tätigkeit bis",
+          "Uni-vonbis": "frühere Tätigkeiten Zeitraum",
+          "Uni-nein": "k13",
+          "Uni-ja": "k14"
 }
 
 def clear_data():
@@ -91,7 +105,7 @@ def write_pdf(d, formfile, pdf_path):
     return output_stream
 
 setup_session_state()
-st.set_page_config(page_title="Hilfe beim Ausfüllen des P166", page_icon=None, layout="wide", menu_items=None)
+st.set_page_config(page_title="Hilfe beim Ausfüllen des P166", page_icon=None, layout="centered", menu_items=None)
 st.header("Hilfe beim Ausfüllen des P166")
 st.write("Hier werden Bewerbungsformulare für Tutorate eingelesen, und einige Felder des P166 automatisch befüllt.")
 
@@ -105,7 +119,12 @@ if submitted:
     st.session_state.data = st.session_state.data + [ { felder[key]: d[key] for key in felder.keys()} for d in data]
 if st.session_state.data != []:
     df = pd.DataFrame(st.session_state.data)
-    df_new = st.data_editor(df, use_container_width = True, num_rows = "fixed")
+    display_columns = ['filename', 'Nachname', 'Vorname', 'Adresse', 'PLZ', 'Ort']
+    column_config = { key : key for key in display_columns}
+    for c in df.columns:
+        if c not in display_columns:
+            column_config[c] = None
+    df_new = st.data_editor(df, column_config=column_config, use_container_width = True, num_rows = "fixed")
     st.session_state.data = df_new.to_dict('records')
     clear_tmp_output()
     for d in st.session_state.data:
