@@ -22,6 +22,8 @@ felder = {"filename": "filename",
           "Einstellung-2": "k2", # "Wiedereinstellung",
           "UniAbschl-1": "k4", # "ohne Abschluss",
           "UniAbschl-2": "k5", # "mit Abschluss",
+          "StudGang-10": "k6", # Bachelor oÄ
+          "StudGang-20": "k7", # Diplom, Magister, Master oÄ
           "Uni-bei": "frühere Tätigkeit bis",
           "Uni-vonbis": "frühere Tätigkeiten Zeitraum",
           "Uni-nein": "k13",
