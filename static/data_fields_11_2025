@@ -1,0 +1,698 @@
+---
+FieldType: Text
+FieldName: Nachname
+FieldNameAlt: Nachname
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Vorname
+FieldNameAlt: Vorname
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Geburtsdatum
+FieldNameAlt: Geburtsdatum
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: in der Zeit vom
+FieldNameAlt: in der Zeit vom
+FieldFlags: 0
+FieldValue: 01.04.2026
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: bis
+FieldNameAlt: bis
+FieldFlags: 0
+FieldValue: 31.07.2026
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: = Beschäftigungszeitraum mit
+FieldNameAlt: = Beschäftigungszeitraum mit
+FieldFlags: 0
+FieldValue: 35
+FieldJustification: Left
+FieldMaxLength: 2
+---
+FieldType: Text
+FieldName: in der Zeit vom_1
+FieldNameAlt: in der Zeit vom
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: bis_1
+FieldNameAlt: bis
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: = Beschäftigungszeitraum mit_1
+FieldNameAlt: = Beschäftigungszeitraum mit
+FieldFlags: 0
+FieldJustification: Left
+FieldMaxLength: 2
+---
+FieldType: Text
+FieldName: Stempel
+FieldFlags: 4096
+FieldValue: Albert–Ludwigs–Universität Freiburg
+Mathematisches Institut
+Abteilung für Reine Mathematik
+Ernst-Zermelo-Str. 1
+D-79104 Freiburg
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Mail
+FieldFlags: 0
+FieldValue: rm@math.uni-freiburg.de
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: sachg
+FieldFlags: 0
+FieldValue: 3.3
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: i1
+FieldFlags: 0
+FieldValue: 1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: i2
+FieldFlags: 0
+FieldValue: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: i3
+FieldFlags: 0
+FieldValue: 7
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: i4
+FieldFlags: 0
+FieldValue: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: i5
+FieldFlags: 0
+FieldValue: 1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: i6
+FieldFlags: 0
+FieldValue: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: i7
+FieldFlags: 0
+FieldValue: 1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: i8
+FieldFlags: 0
+FieldValue: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: i9
+FieldFlags: 0
+FieldValue: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: i10
+FieldFlags: 0
+FieldValue: 1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Datum
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: bearbeit
+FieldFlags: 0
+FieldValue: Irina Brunner/Olga Khadikov
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Tel
+FieldFlags: 0
+FieldValue: 5542
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: herrfrau
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: neueins
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: wiederein
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: verlaenger
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: aend.erhoeh
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: aend.ersetz
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: aend.sonst
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: ohnehoch
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: mithoch
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: bachelor
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: master
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Text
+FieldName: sonsttext
+FieldNameAlt: Begründung
+FieldFlags: 4096
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: betreuprakt
+FieldFlags: 0
+FieldValue: Yes
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: kürzlauf
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: sonstbegr
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Text
+FieldName: hhk1
+FieldFlags: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: hhk2
+FieldFlags: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: hhk3
+FieldFlags: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: hhk4
+FieldFlags: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: hhk5
+FieldFlags: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: hhk6
+FieldFlags: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: hhk7
+FieldFlags: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: hhk8
+FieldFlags: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: hhk9
+FieldFlags: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: hhk10
+FieldFlags: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: fond1
+FieldFlags: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: fond2
+FieldFlags: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: fond3
+FieldFlags: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: fond4
+FieldFlags: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: projfond1
+FieldFlags: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: projfond2
+FieldFlags: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: projfond3
+FieldFlags: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: projfond4
+FieldFlags: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: pjk1
+FieldFlags: 0
+FieldValue: 1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: pjk2
+FieldFlags: 0
+FieldValue: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: pjk3
+FieldFlags: 0
+FieldValue: 7
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: pjk4
+FieldFlags: 0
+FieldValue: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: pjk5
+FieldFlags: 0
+FieldValue: 1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: pjk6
+FieldFlags: 0
+FieldValue: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: pjk7
+FieldFlags: 0
+FieldValue: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: pjk8
+FieldFlags: 0
+FieldValue: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: pjk9
+FieldFlags: 0
+FieldValue: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: pjk10
+FieldFlags: 0
+FieldValue: 1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: pr1
+FieldFlags: 0
+FieldValue: 8
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: pr2
+FieldFlags: 0
+FieldValue: 1
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: pr3
+FieldFlags: 0
+FieldValue: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: pr4
+FieldFlags: 0
+FieldValue: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: pr5
+FieldFlags: 0
+FieldValue: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: pr6
+FieldFlags: 0
+FieldValue: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: pr7
+FieldFlags: 0
+FieldValue: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: pr8
+FieldFlags: 0
+FieldValue: 4
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: pr9
+FieldFlags: 0
+FieldValue: 6
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: pr10
+FieldFlags: 0
+FieldValue: 2
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: übtaus
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: unterstützt
+FieldFlags: 0
+FieldValue: ✗
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: sonstmitt
+FieldFlags: 4096
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: tätvonbis
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: tätbei
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: HHMittel
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Projektm
+FieldFlags: 0
+FieldValue: Yes
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: frühernein
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: früherja
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: arbeitmednein
+FieldFlags: 0
+FieldValue: Yes
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: arbeitmedja
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: prja
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: 42101bs
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: 42101v
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: NachwKK
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: 166a
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: P3
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: P496
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: 166b
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Studbesch
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: bzeugnis
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Imma
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: hszeugnis
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: Studbesch2
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: ernnurk
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: P11
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: aufenth
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: chaufenth
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: prnein
+FieldFlags: 0
+FieldValue: Yes
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes

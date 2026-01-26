@@ -7,6 +7,8 @@ import pandas as pd
 from pypdf import PdfReader, PdfWriter
 import os
 
+p166pdf = 'static/P166_11_2025.pdf'
+
 # Dies ist ein dictionary mit key = name im Eingabeformular, value = name im Ausgabeformular
 felder = {"filename": "filename",
           "name": "Nachname", 
@@ -18,16 +20,16 @@ felder = {"filename": "filename",
           "gebdat": "Geburtsdatum", 
           #"bereits-taetig-nein": "k13",
           #"bereits-taetig-ja": "k14",
-          "Einstellung-1": "k1", # "Neueinstellung",
-          "Einstellung-2": "k2", # "Wiedereinstellung",
-          "UniAbschl-1": "k4", # "ohne Abschluss",
-          "UniAbschl-2": "k5", # "mit Abschluss",
-          "StudGang-10": "k6", # Bachelor oÄ
-          "StudGang-20": "k7", # Diplom, Magister, Master oÄ
-          "Uni-bei": "frühere Tätigkeit bis",
-          "Uni-vonbis": "frühere Tätigkeiten Zeitraum",
-          "Uni-nein": "k13",
-          "Uni-ja": "k14"
+          "Einstellung-1": "neueins", # "Neueinstellung",
+          "Einstellung-2": "wiederein", # "Wiedereinstellung",
+          "UniAbschl-1": "ohnehoch", # "ohne Abschluss",
+          "UniAbschl-2": "mithochk5", # "mit Abschluss",
+          "StudGang-10": "bachelor", # Bachelor oÄ
+          "StudGang-20": "master", # Diplom, Magister, Master oÄ
+          "Uni-bei": "tätbei",
+          "Uni-vonbis": "tätvonbis",
+          "Uni-nein": "frühernein",
+          "Uni-ja": "frühernein"
 }
 
 def clear_data():
@@ -130,7 +132,7 @@ if st.session_state.data != []:
     st.session_state.data = df_new.to_dict('records')
     clear_tmp_output()
     for d in st.session_state.data:
-        write_pdf(d, 'static/P166_03_2024.pdf', 'output')
+        write_pdf(d, p166pdf, 'output')
 
     os.system("cd output; tar czvf ../tmp/data.tgz *")
     col1, col2 = st.columns([1, 1])

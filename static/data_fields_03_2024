@@ -1,0 +1,381 @@
+---
+FieldType: Text
+FieldName: Sachbearbeiter
+FieldFlags: 12582912
+FieldValue: Irina Brunner/Olga Khadikov
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Telefon
+FieldFlags: 12582912
+FieldValue: 5542
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: e-mail
+FieldFlags: 12582912
+FieldValue: rm@math.uni-freiburg.de
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: SG D3
+FieldFlags: 12582912
+FieldValue: 3.3
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: SB D3
+FieldFlags: 12582912
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Geburtsdatum
+FieldFlags: 12582912
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: von
+FieldFlags: 12582912
+FieldValue: 1.4.2025
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: bis
+FieldFlags: 12582912
+FieldValue: 31.7.2025
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Mitteilungen
+FieldFlags: 4198400
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: k1
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k2
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k4
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k5
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k6
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k7
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k8
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k9
+FieldFlags: 0
+FieldValue: Ja
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k11
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k12
+FieldFlags: 0
+FieldValue: Ja
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k13
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k21
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k23
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k24
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k25
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: frühere Tätigkeit bis
+FieldFlags: 12582912
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: frühere Tätigkeiten Zeitraum
+FieldFlags: 12582912
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Fonds Haushaltsmittel
+FieldFlags: 12582912
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Fonds Projekte
+FieldFlags: 12582912
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Kostenstelle Projekte
+FieldFlags: 12582912
+FieldValue: 8100000462
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Projektnummer Finanzerung
+FieldFlags: 12582912
+FieldValue: 1070100001
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Stempel Beschäftigungseinrichtung
+FieldFlags: 12587008
+FieldValue: Albert–Ludwigs–Universität Freiburg
+Mathematisches Institut
+Abteilung für Reine Mathematik
+Ernst-Zermelo-Str. 1
+D-79104 Freiburg
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Datum Antrag
+FieldFlags: 12582912
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mit
+FieldFlags: 12582912
+FieldValue: 35
+FieldJustification: Left
+FieldMaxLength: 2
+---
+FieldType: Text
+FieldName: Kostenstelle Haushaltsmittel
+FieldFlags: 12582912
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Tätigkeitsort1
+FieldFlags: 12582912
+FieldValue: 1
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: Tätigkeitsort2
+FieldFlags: 12582912
+FieldValue: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: Tätigkeitsort6
+FieldFlags: 12582912
+FieldValue: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: Tätigkeitsort5
+FieldFlags: 12582912
+FieldValue: 1
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: Tätigkeitsort4
+FieldFlags: 12582912
+FieldValue: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: Tätigkeitsort3
+FieldFlags: 12582912
+FieldValue: 7
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: Tätigkeitsort7
+FieldFlags: 12582912
+FieldValue: 1
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: Tätigkeitsort8
+FieldFlags: 12582912
+FieldValue: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: Tätigkeitsort9
+FieldFlags: 12582912
+FieldValue: 0
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Text
+FieldName: Tätigkeitsort10
+FieldFlags: 12582912
+FieldValue: 1
+FieldJustification: Left
+FieldMaxLength: 1
+---
+FieldType: Button
+FieldName: k3
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k3a
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k22
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+--- 
+FieldType: Button
+FieldName: k19
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k14
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k14A
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k14B
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: Nachname
+FieldFlags: 12582912
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Vorname
+FieldFlags: 12582912
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: k15
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k16
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k17aaa
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k17
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: k18
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
