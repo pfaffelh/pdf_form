@@ -23,13 +23,13 @@ felder = {"filename": "filename",
           "Einstellung-1": "neueins", # "Neueinstellung",
           "Einstellung-2": "wiederein", # "Wiedereinstellung",
           "UniAbschl-1": "ohnehoch", # "ohne Abschluss",
-          "UniAbschl-2": "mithochk5", # "mit Abschluss",
+          "UniAbschl-2": "mithoch", # "mit Abschluss",
           "StudGang-10": "bachelor", # Bachelor oÄ
           "StudGang-20": "master", # Diplom, Magister, Master oÄ
           "Uni-bei": "tätbei",
           "Uni-vonbis": "tätvonbis",
           "Uni-nein": "frühernein",
-          "Uni-ja": "frühernein"
+          "Uni-ja": "früherja"
 }
 
 def clear_data():
