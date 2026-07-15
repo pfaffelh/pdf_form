@@ -108,7 +108,7 @@ with st.form("my-form-retriever", clear_on_submit=True):
 
 if submitted:
     data = data_from_pdfs(uploaded_files)
-    st.session_state.data = st.session_state.data + [ { felder[key]: d[key] for key in felder.keys()} for d in data]
+    st.session_state.data = st.session_state.data + [ { felder[key]: d.get(key, "") for key in felder.keys()} for d in data]
 if st.session_state.data != []:
     df = pd.DataFrame(st.session_state.data)
     display_columns = ['filename', 'Nachname', 'Vorname', 'Adresse', 'PLZ', 'Ort']
