@@ -1,43 +1,39 @@
-### General
+# P166-Ausfüllhilfe
 
-You just downloaded a small [repository](https://github.com/pfaffelh/pdf_form)  using
+Eine kleine [Streamlit](https://streamlit.io)-App, die beim Ausfüllen des
+Einstellungsformulars **P166** (Tutorate/Hilfskräfte) hilft: Sie liest ausgefüllte
+PDF-Bewerbungsformulare ein und befüllt daraus automatisch einige Felder des P166.
+
+## Installation
+
 ```
 git clone https://github.com/pfaffelh/pdf_form
-```
-You probably need to call
-```
+cd pdf_form
 pip install -r requirements.txt
 ```
-in order to install some packages. There are two ways you can use the provided command: via command prompt, or use
+
+## Starten
+
 ```
 streamlit run Pdf_form.py
 ```
-and have a small web-app. We will only describe the commands here: You now have two new commands, which come with a small help:
-```
-python3 fill_excel.py -h
-python3 fill_pdf.py -h
-```
-The first takes filled pdf forms and puts the data to an excel file. 
-The second takes an excel file and fills an empty pdf form.
 
-### Workflow:
+## Ablauf
 
-#### 1) Create excel file from filled pdf form(s)
+1. Ein oder mehrere ausgefüllte PDF-Bewerbungsformulare hochladen (Mehrfachauswahl möglich).
+2. Die App liest die Formularfelder aus und zeigt die Daten in einer editierbaren Tabelle.
+3. Für jede Zeile wird ein vorbefülltes P166 erzeugt; alle zusammen gibt es als
+   `data.tgz` zum Download.
 
-Use
-```
-python3 fill_excel.py -o data_from_bewerbungen.xls -p input/*.pdf
-```
-to create a file `data_from_bewerbungen.xlsx` that contains data from all pdfs at the specified path `path/*.pdf`.
-Alternatively list the pdf files you want to read:
-```
-python3 fill_excel.py -o data_from_bewerbungen.xls -p input/Donald_Duck.pdf input/Micky_Maus.pdf
-```
+## Konfiguration
 
-#### 2) Create pdf file(s) from filled excel file
+- Die verwendete P166-Vorlage steht am Anfang von `Pdf_form.py`
+  (`p166pdf = 'static/P166_07_2026.pdf'`). Ältere Vorlagen liegen ebenfalls in `static/`.
+- Das Feld-Mapping (Feldname im Bewerbungsformular → Feldname im P166) steht im
+  Dictionary `felder` in `Pdf_form.py`. Wechselt die Vorlage, sollten die dort
+  genutzten Feldnamen im neuen PDF vorhanden sein.
 
-Use
-```
-python3 fill_pdf.py p6w_leer.pdf -i data_for_einstellungen.xls -o output -s Name
-```
-to fill out the empty form `p6w_leer.pdf` with data from the excel file `data_for_einstellungen.xlsx`. The required option `-o` indicates the folder where the pdf files will be created. The pdf files will be named after the field name given by the Option `-s`.
+## Verzeichnisse
+
+- `static/` – P166-Vorlagen
+- `input/`, `output/`, `tmp/` – Arbeitsverzeichnisse zur Laufzeit (Inhalte werden nicht versioniert)

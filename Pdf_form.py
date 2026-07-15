@@ -1,7 +1,3 @@
-# Neu- Wiedereinstellung übernehmen
-# mit ohne Abschluss von bis mit
-# weitere/frühere Tätigkeiten von--bis bei
-
 import streamlit as st
 import pandas as pd
 from pypdf import PdfReader, PdfWriter
@@ -17,10 +13,7 @@ felder = {"filename": "filename",
           "strasse": "Adresse",
           "ort": "Ort", 
           "plz": "PLZ",
-          "email": "Email",
-          "gebdat": "Geburtsdatum", 
-          #"bereits-taetig-nein": "k13",
-          #"bereits-taetig-ja": "k14",
+          "gebdat": "Geburtsdatum",
           "Einstellung-1": "neueins", # "Neueinstellung",
           "Einstellung-2": "wiederein", # "Wiedereinstellung",
           "UniAbschl-1": "ohnehoch", # "ohne Abschluss",
