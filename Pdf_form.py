@@ -8,7 +8,7 @@ from pypdf import PdfReader, PdfWriter
 from pypdf.generic import NameObject, BooleanObject, DictionaryObject
 import os
 
-p166pdf = 'static/P166_11_2025.pdf'
+p166pdf = 'static/P166_07_2026.pdf'
 
 # Dies ist ein dictionary mit key = name im Eingabeformular, value = name im Ausgabeformular
 felder = {"filename": "filename",
@@ -125,10 +125,6 @@ def write_pdf(d, formfile, pdf_path):
     filename = (pdf_path + "/" + output_filename)
     with open(filename, "wb") as output_stream:
             writer.write(output_stream)
-    
-    filename = (f"{d['filename']}_P166.pdf")
-    with open(filename, "wb") as output_stream:
-        writer.write(output_stream)
     return output_stream
 
 setup_session_state()
