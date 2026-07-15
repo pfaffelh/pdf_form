@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 from pypdf import PdfReader, PdfWriter
-from pypdf.generic import NameObject, BooleanObject, DictionaryObject
 import os
 
 p166pdf = 'static/P166_07_2026.pdf'
@@ -68,26 +67,9 @@ def write_pdf(d, formfile, pdf_path):
     keys = set(d.keys()).intersection(set(fields.keys()))
     fields = {key:value for key,value in fields.items() if key in keys}
 
-    # Check Output-Pfad
-    # Write one file for each row in the excel file.
-    # Use column name_by for filenames.
+    # Write one output file for each data row.
     writer = PdfWriter()
     writer.append(reader)
-
-    # Das behebt ein Font-Problem (Helvetica not found)
-    acro = writer._root_object["/AcroForm"]
-    if "/DR" not in acro:
-        acro[NameObject("/DR")] = DictionaryObject()
-    dr = acro["/DR"]
-    if "/Font" not in dr:
-        dr[NameObject("/Font")] = DictionaryObject()
-    font_dict = dr["/Font"]
-    font_dict[NameObject("/Helvetica")] = DictionaryObject({
-        NameObject("/Type"): NameObject("/Font"),
-        NameObject("/Subtype"): NameObject("/Type1"),
-        NameObject("/BaseFont"): NameObject("/Helvetica"),
-    })
-    writer._root_object.update({NameObject("/NeedAppearances"): BooleanObject(True)})
 
     for i in range(len(reader.pages)):
         for key, field in fields.items():
@@ -101,12 +83,6 @@ def write_pdf(d, formfile, pdf_path):
                         st.write("Problems with field " + key)
             else:
                 try:
-                    page = writer.pages[i]
-                    for annot in page.get("/Annots", []):
-                        obj = annot.get_object()
-                        if obj.get("/T") == key:   # Feldname matcht
-                            obj.pop("/AP", None)  # Appearance löschen
-                            break
                     writer.update_page_form_field_values(writer.pages[i], {key: d[key]})
                 except:
                     st.write("Problems with text field " + key + ", value " + d[key])
