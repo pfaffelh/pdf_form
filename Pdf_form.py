@@ -83,7 +83,7 @@ def write_pdf(d, formfile, pdf_path):
                         st.write("Problems with field " + key)
             else:
                 try:
-                    writer.update_page_form_field_values(writer.pages[i], {key: d[key]})
+                    writer.update_page_form_field_values(writer.pages[i], {key: d[key]}, auto_regenerate=False)
                 except:
                     st.write("Problems with text field " + key + ", value " + d[key])
 
